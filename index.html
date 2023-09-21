@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppgift 1</title>
+</head>
+<body>
+
+<style>
+.main {
+    display:flex;
+    flex-direction:row;
+    gap:3px;
+    justify-content:center;
+    align-items:center;
+}
+
+.result {
+    border:2px solid black;
+    width:10vw;
+    height:20px;
+}
+</style>
+<div class="main">
+<input type="text" class="firstNumber" required > 
+<button id="plus" class="operator" onclick="add()" value="+">+</button>
+<button id="minus" class="operator" oncl value="-">-</button>
+<button id="divide" class="operator" value="/">/</button>
+<button id= "multiply"class="operator" value="*">X</button> 
+<input type="text" class="secondNumber" required>
+<button class="likaMed">=</button>
+<div class="result"></div>
+</div>
+
+<script src="app.js">
+</script>
+</body>
+</html>
