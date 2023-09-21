@@ -1,32 +1,44 @@
-const secondNumber = parseInt(document.querySelector('.secondNumber').value);
-const firstNumber =  parseInt(document.querySelector('.firstNumber').value);
-const result = document.querySelector('.result');
-const equals = document.querySelector('.likaMed');
-const addition = document.querySelector('#plus');
-const subtraction = document.querySelector('#minus');
-const multiplication = document.querySelector('#multiply');
-const divison = document.querySelector('#divide');
+const secondNumber = parseInt(document.querySelector(".secondNumber").value);
+const firstNumber = parseInt(document.querySelector(".firstNumber").value);
+const display = document.querySelector(".result");
+const equalBtn = document.querySelector(".likaMed");
+const addBtn = document.querySelector("#plus");
+const subtractionBtn = document.querySelector("#minus");
+const multiplicationBtn = document.querySelector("#multiply");
+const divisonBtn = document.querySelector("#divide");
 
-console.log("First number = " + firstNumber);
-console.log("Second number = " + secondNumber);
+const populateDisplay = function (value) {
+  display.textContent = value;
+};
+
 const add = () => {
-   return firstNumber + secondNumber;
-}
-console.log("add = " + add());
-const subtract = () => {
-    return firstNumber - secondNumber;
-} 
+  return firstNumber + secondNumber;
+};
 
-console.log("subtract = " + subtract());
+const subtract = () => {
+  return firstNumber - secondNumber;
+};
 
 const multiply = () => {
-    return firstNumber * secondNumber;
-}
+  return firstNumber * secondNumber;
+};
 
-console.log("multiply = " + multiply());
 const divide = () => {
-    return firstNumber / secondNumber;
-}
+  return firstNumber / secondNumber;
+};
 
-console.log("divide = " + divide());
+addBtn.addEventListener("click", function () {
+  populateDisplay(add());
+});
 
+subtractionBtn.addEventListener("click", function () {
+  populateDisplay(subtract());
+});
+
+divisonBtn.addEventListener("click", function () {
+  populateDisplay(divide());
+});
+
+multiplicationBtn.addEventListener("click", function () {
+  populateDisplay(multiply());
+});
